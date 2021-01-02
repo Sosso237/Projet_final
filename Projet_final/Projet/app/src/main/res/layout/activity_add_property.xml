@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:background="@drawable/background"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        tools:context=".Add_property"
+        >
+
+    <Button
+        android:id="@+id/deconnected2"
+        android:layout_width="131dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="107dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_iconmonstr_log_out_1"
+        android:text="Disconnected"
+        android:textColor="#F3F1F1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerProperty_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtproperty_type"
+        android:layout_width="160dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="45dp"
+        android:text="Select the type"
+        android:textColor="#FDFDFD"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtproperty_price"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerProperty_type"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerProperty_type"
+        android:layout_width="193dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="12dp"
+
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/editProperty_price"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtproperty_price"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="Property Price"
+        android:textColor="#FFFBFB"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtproperty_surface"
+        app:layout_constraintEnd_toStartOf="@+id/editProperty_price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editProperty_price"
+        android:layout_width="194dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editProperty_surface"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtproperty_surface"
+        android:layout_width="161dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="46dp"
+        android:text="Surface"
+        android:textColor="#F8F2F2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtproperty_rooms"
+        app:layout_constraintEnd_toStartOf="@+id/editProperty_surface"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editProperty_surface"
+        android:layout_width="196dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#FAF8F8"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerProperty_rooms"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerProperty_rooms"
+        android:layout_width="191dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/editPropertyDescription"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editPropertyDescription"
+        android:layout_width="374dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="#FDFCFC"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtproperty_description"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="322dp"
+        android:layout_marginBottom="28dp"
+        android:text="Description"
+        android:textColor="#FBF9F9"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editPropertyDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="173dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="68dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/valider_add_property"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Txtproperty"
+        android:layout_width="127dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="43dp"
+        android:text="ADD A PROPERTY"
+        android:textColor="#ECE6E6"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerProperty_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtproperty_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="68dp"
+        android:text="Address"
+        android:textColor="#F8F8F8"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back_from_add_property"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+            android:id="@+id/valider_add_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="141dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="21dp"
+            android:background="@android:color/transparent"
+            android:text="Next Page"
+            android:textColor="#FFFCFC"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back_from_add_property" />
+
+    <Button
+        android:id="@+id/back_from_add_property"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="21dp"
+        android:background="@android:color/transparent"
+        android:text="Back"
+        android:textColor="#FFFEFE"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtproperty_rooms"
+        android:layout_width="112dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="19dp"
+        android:text="Rooms"
+        android:textColor="#FBF7F7"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtproperty_description"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerProperty_rooms"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

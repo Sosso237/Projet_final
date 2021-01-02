@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Delete_property1">
+
+    <Button
+        android:id="@+id/deconn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="285dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="201dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_iconmonstr_log_out_1"
+        android:text="Disconnected"
+        android:textColor="#FAF6F6"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="327dp"
+        android:layout_marginEnd="201dp"
+        android:layout_marginBottom="165dp"
+        android:background="@android:color/transparent"
+        android:text="Back"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_delete" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="165dp"
+        android:background="@android:color/transparent"
+        android:text="DELETE"
+        android:textColor="#F1EDED"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/id_delete"
+        android:layout_width="185dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="63dp"
+        android:text="SET THE ID"
+        android:textColor="#F8F3F3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="218dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="196dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#F8F5F5"
+        app:layout_constraintBottom_toTopOf="@+id/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

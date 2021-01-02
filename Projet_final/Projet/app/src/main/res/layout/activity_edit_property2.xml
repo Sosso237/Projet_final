@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Edit_property2">
+
+    <Button
+        android:id="@+id/deco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="267dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="81dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_iconmonstr_log_out_1"
+        android:text=" Disconnected"
+        android:textColor="#F3EFEF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_printid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="54dp"
+        android:text="Edit Property"
+        android:textColor="#FBF9F9"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_printid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_id"
+        android:layout_width="82dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="48dp"
+        android:text="ID"
+        android:textColor="#FAF6F6"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_type"
+        app:layout_constraintEnd_toStartOf="@+id/text_printid"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_type"
+        android:layout_width="94dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="Type"
+        android:textColor="#F4F1F1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_price"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_edit_type"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="46dp"
+        android:text="Price"
+        android:textColor="#FBF9F9"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_surface"
+        app:layout_constraintEnd_toStartOf="@+id/edit_price"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="62dp"
+        android:text="surface"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_rooms"
+        app:layout_constraintEnd_toStartOf="@+id/edit_surface"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_rooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="36dp"
+        android:text="Rooms"
+        android:textColor="#F4F4F4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_description"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_edit_rooms"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="125dp"
+        android:text="Description"
+        android:textColor="#F6F2F2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/text_address"
+        app:layout_constraintEnd_toStartOf="@+id/edit_description"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="28dp"
+        android:text="Address"
+        android:textColor="#FBF8F8"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/back_edit"
+        app:layout_constraintEnd_toStartOf="@+id/edit_address"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/back_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:text="back"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next_page_edit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next_page_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:text="Next page"
+        android:textColor="#FDFBFB"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_printid"
+        android:layout_width="109dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="39dp"
+        android:text="Text_printid"
+        android:textColor="#FAF8F8"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_edit_type"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_edit_type"
+        android:layout_width="217dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_price"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="215dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#FDF8F8"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_surface"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_surface"
+        android:layout_width="219dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="49dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_edit_rooms"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_edit_rooms"
+        android:layout_width="219dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_description"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="234dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="#F4EFEF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_address"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_address"
+        android:layout_width="236dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:textColor="#F1EDED"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/next_page_edit"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

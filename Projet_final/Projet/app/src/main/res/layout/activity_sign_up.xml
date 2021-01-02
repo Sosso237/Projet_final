@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Sign_up">
+
+    <TextView
+        android:id="@+id/register_form"
+        android:layout_width="163dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="78dp"
+        android:text="Register"
+        android:textColor="#F8F6F6"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editPerson_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPerson_name"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="43dp"
+        android:ems="10"
+        android:hint="Please set your name (*)"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#F4F1F1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editPerson_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editPerson_username"
+        android:layout_width="256dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:hint="Please set your username"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFEFE"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editPerson_mailaddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editPerson_mailaddress"
+        android:layout_width="257dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:hint="Enter your email address (*)"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#F8F8F8"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editPerson_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editPerson_password"
+        android:layout_width="261dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:hint="Type your password (*)"
+        android:inputType="textPassword"
+        android:textColorHint="#F8F7F7"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editPerson_verification_password"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/validate_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/transparent"
+        android:text="Validate"
+        android:textColor="#F6F4F4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editPerson_verification_password"
+        android:layout_width="257dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="96dp"
+        android:ems="10"
+        android:hint="Type again your password (*)"
+        android:inputType="textPassword"
+        android:textColorHint="#F6F6F6"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/validate_form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/back_from_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="34dp"
+        android:background="@android:color/transparent"
+        android:text="Back"
+        android:textColor="#F8F6F6"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/validate_form"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/error_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="112dp"
+        android:text="Warning all fiels are necessary"
+        android:textColor="#F30C0C"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPerson_verification_password" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Specific_property">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="91dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/ic_iconmonstr_log_out_1"
+        android:text=" Disconnected"
+        android:textColor="#F4F1F1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/Txt_update_date"
+        android:layout_width="171dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="18dp"
+        android:text="TextView"
+        android:textColor="#F6F0F0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_description"
+        app:layout_constraintEnd_toStartOf="@+id/Txt_agent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_agent"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="21dp"
+        android:text="TextView"
+        android:textColor="#F6F0F0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_description"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_type"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="40dp"
+        android:text="TextView"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_price"
+        app:layout_constraintEnd_toStartOf="@+id/Txt_address"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_surface"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="41dp"
+        android:text="TextView"
+        android:textColor="#F4F0F0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_update_date"
+        app:layout_constraintEnd_toStartOf="@+id/Txt_creation_date"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_status"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="48dp"
+        android:text="TextView"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_creation_date"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_description"
+        android:layout_width="375dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="29dp"
+        android:text="TextView"
+        android:textColor="#F4F0F0"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_creation_date"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="41dp"
+        android:text="TextView"
+        android:textColor="#F4EFEF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_agent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_rooms"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="39dp"
+        android:text="TextView"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_address"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_address"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="40dp"
+        android:text="TextView"
+        android:textColor="#EDE8E8"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_status"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_price"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="48dp"
+        android:text="TextView"
+        android:textColor="#F4F2F2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_surface"
+        app:layout_constraintEnd_toStartOf="@+id/Txt_status"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="189dp"
+        android:layout_marginBottom="400dp"
+        android:text="Property"
+        android:textColor="#F8F5F5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_id"
+        android:layout_width="128dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="39dp"
+        android:text="TextView"
+        android:textColor="#F4F2F2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Txt_type"
+        app:layout_constraintEnd_toStartOf="@+id/Txt_rooms"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="161dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:text="BACK"
+        android:textColor="#FAF6F6"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
