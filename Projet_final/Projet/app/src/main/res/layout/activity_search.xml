@@ -7,6 +7,17 @@
     android:background="@drawable/background"
     tools:context=".Search">
 
+    <TextView
+        android:id="@+id/searchSurfaceMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="40dp"
+        android:text="Maximum"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchRoomsMin"
+        app:layout_constraintStart_toEndOf="@+id/searchSurface" />
+
     <Button
         android:id="@+id/deconnec_search"
         android:layout_width="wrap_content"
@@ -23,42 +34,252 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/search"
-        android:layout_width="377dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="101dp"
-        android:layout_marginEnd="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deconnec_search" />
-
-    <ListView
-        android:id="@+id/Lview"
-        android:layout_width="375dp"
-        android:layout_height="394dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/deco"
+        android:id="@+id/back_from_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="149dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
         android:text="back"
         android:textColor="#F8F3F3"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/searchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Search Criterias"
+        android:textColor="#F8F8F8"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSearchType"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Lview" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <TextView
+        android:id="@+id/searchType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="64dp"
+        android:text="Type"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/searchPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="120dp"
+        android:text="Price"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchSurface"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/searchSurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="76dp"
+        android:text="Surface"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchRooms"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerSearchType"
+        android:layout_width="203dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchPriceMinNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toEndOf="@+id/searchType" />
+
+    <TextView
+        android:id="@+id/searchPriceMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Minimum"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchPriceMax"
+        app:layout_constraintStart_toEndOf="@+id/searchPrice" />
+
+    <TextView
+        android:id="@+id/searchPriceMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="76dp"
+        android:text="Maximum"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchSurfaceMin"
+        app:layout_constraintStart_toEndOf="@+id/searchPrice" />
+
+    <TextView
+        android:id="@+id/searchSurfaceMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Minimum"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchSurfaceMax"
+        app:layout_constraintStart_toEndOf="@+id/searchSurface" />
+
+    <EditText
+        android:id="@+id/searchPriceMinNumber"
+        android:layout_width="149dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/searchPriceMaxNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toEndOf="@+id/searchPriceMin" />
+
+    <EditText
+        android:id="@+id/searchPriceMaxNumber"
+        android:layout_width="149dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/searchSurfaceMinNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/searchPriceMax" />
+
+    <EditText
+        android:id="@+id/searchSurfaceMinNumber"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/searchSurfaceMaxNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toEndOf="@+id/searchSurfaceMin" />
+
+    <EditText
+        android:id="@+id/searchSurfaceMaxNumber"
+        android:layout_width="138dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/searchRoomsMinNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toEndOf="@+id/searchSurfaceMax" />
+
+    <TextView
+        android:id="@+id/searchRoomsMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="24dp"
+        android:text="Minimum"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchRoomsMax"
+        app:layout_constraintStart_toEndOf="@+id/searchRooms" />
+
+    <EditText
+        android:id="@+id/searchRoomsMinNumber"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/searchRoomsMaxNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toEndOf="@+id/searchRoomsMin" />
+
+    <TextView
+        android:id="@+id/searchRoomsMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="32dp"
+        android:text="Maximum"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchStatus"
+        app:layout_constraintStart_toEndOf="@+id/searchRooms" />
+
+    <EditText
+        android:id="@+id/searchRoomsMaxNumber"
+        android:layout_width="140dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSearchStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toEndOf="@+id/searchRoomsMax" />
+
+    <TextView
+        android:id="@+id/searchRooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="56dp"
+        android:text="Rooms"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/searchStatus"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/searchStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="12dp"
+        android:text="Status"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/back_from_search"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerSearchStatus"
+        android:layout_width="217dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/back_from_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toEndOf="@+id/searchStatus" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:text="Search"
+        android:textColor="#F8F3F3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toEndOf="@+id/back_from_search" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
