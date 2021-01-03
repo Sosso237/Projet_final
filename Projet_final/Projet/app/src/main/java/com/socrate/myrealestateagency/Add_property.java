@@ -23,7 +23,7 @@ public class Add_property extends AppCompatActivity {
     EditText editProperty_price,editProperty_surface,editPropertyDescription,editTextTextPostalAddress;
 
     String[] type={"House","Flat","Office"};
-    String[] rooms = {"1","2","3","4","5","6","7","8","9"};
+    Integer[] rooms = {1,2,3,4,5,6,7,8,9};
 
 
     SQLiteOpenHelper helper;
@@ -63,7 +63,7 @@ public class Add_property extends AppCompatActivity {
         helper = new SQLiteOpenHelper(Add_property.this,"Rooms.db",null,1) {
             @Override
             public void onCreate(SQLiteDatabase sqLiteDatabase) {
-                sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS Appart (_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,Type TEXT NOT NULL, Price TEXT NOT NULL, Surface TEXT NOT NULL ,Rooms TEXT NOT NULL,Description TEXT NOT NULL,Address TEXT NOT NULL,Status TEXT NOT NULL,Creation_Date TEXT NOT NULL, Update_date TEXT NOT NULL, Agent TEXT NOT NULL);");
+                sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS Appart (_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,Type TEXT NOT NULL, Price INTEGER NOT NULL, Surface INTEGER NOT NULL ,Rooms INTEGER NOT NULL,Description TEXT NOT NULL,Address TEXT NOT NULL,Status TEXT NOT NULL,Creation_Date TEXT NOT NULL, Update_date TEXT NOT NULL, Agent TEXT NOT NULL);");
 
             }
 
@@ -106,7 +106,7 @@ public class Add_property extends AppCompatActivity {
             public void onClick(View view) {
                 // Check if all values are not empty
                 if (spinnerProperty_type.getSelectedItem().toString().isEmpty() || editProperty_price.getText().toString().isEmpty() ||  editProperty_surface.getText().toString().isEmpty() || spinnerProperty_rooms.getSelectedItem().toString().isEmpty() || editPropertyDescription.getText().toString().isEmpty() || editTextTextPostalAddress.getText().toString().isEmpty() ){
-                    Toast.makeText(Add_property.this, "Warning all fiels are required", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Add_property.this, "Warning all fields are required", Toast.LENGTH_LONG).show();
                 } else {
                 // Passing values to Add_property2 interface
 
