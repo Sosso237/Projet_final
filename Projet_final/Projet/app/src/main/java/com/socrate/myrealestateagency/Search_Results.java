@@ -30,7 +30,7 @@ public class Search_Results extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display__properties);
+        setContentView(R.layout.activity_search_results);
 
         deco = findViewById(R.id.deco);
         Display_back = findViewById(R.id.Display_back);
@@ -41,6 +41,14 @@ public class Search_Results extends AppCompatActivity {
 
         final Intent x = getIntent();
         final String name = x.getStringExtra("username");
+        final String populate_type = x.getStringExtra("populate_type");
+        final String polulate_status = x.getStringExtra("polulate_status");
+        final Integer searchPriceMaxNumber = Integer.valueOf(x.getStringExtra("searchPriceMaxNumber"));
+        final Integer searchPriceMinNumber = Integer.valueOf(x.getStringExtra("searchPriceMinNumber"));
+        final Integer searchRoomsMaxNumber = Integer.valueOf(x.getStringExtra("searchRoomsMaxNumber"));
+        final Integer searchRoomsMinNumber = Integer.valueOf(x.getStringExtra("searchRoomsMinNumber"));
+        final Integer searchSurfaceMaxNumber = Integer.valueOf(x.getStringExtra("searchSurfaceMaxNumber"));
+        final Integer searchSurfaceMinNumber = Integer.valueOf(x.getStringExtra("searchSurfaceMinNumber"));
 
         // Database Connection
         helper = new SQLiteOpenHelper(Search_Results.this,"Rooms.db",null,1) {
@@ -61,7 +69,7 @@ public class Search_Results extends AppCompatActivity {
         database = helper.getReadableDatabase();
 
         //Getting value from the query
-        Cursor c = database.rawQuery("SELECT DISTINCT * FROM Appart;",null);
+        Cursor c = database.rawQuery("SELECT DISTINCT * FROM Appart WHERE CAST (Price AS INT) < 'searchPriceMaxNumber' ", null);
         final ArrayList<Advert> arrayList = new ArrayList<>();
         // While there is a line , add it to the arrayList
         while (c.moveToNext()){
@@ -78,18 +86,22 @@ public class Search_Results extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(Search_Results.this,Specific_property.class);
-                intent.putExtra("ID",String.valueOf(arrayList.get(i).getId()));
-                intent.putExtra("Type",arrayList.get(i).getType());
-                intent.putExtra("price",arrayList.get(i).getPrice());
-                intent.putExtra("surface",arrayList.get(i).getSurface());
-                intent.putExtra("Rooms",arrayList.get(i).getRooms());
-                intent.putExtra("description",arrayList.get(i).getDescription());
-                intent.putExtra("address",arrayList.get(i).getAddress());
-                intent.putExtra("status",arrayList.get(i).getStatus());
-                intent.putExtra("creation_date",arrayList.get(i).getCreation_date());
-                intent.putExtra("update",arrayList.get(i).getUpdate_date());
-                intent.putExtra("agent",arrayList.get(i).getAgent());
-                startActivity(intent);
+
+                //if (Integer.valueOf(arrayList.get(i).getPrice()) <= searchPriceMaxNumber & Integer.valueOf(arrayList.get(i).getPrice()) >= searchPriceMinNumber) {
+                    intent.putExtra("ID",String.valueOf(arrayList.get(i).getId()));
+                    intent.putExtra("Type",arrayList.get(i).getType());
+                    intent.putExtra("price",arrayList.get(i).getPrice());
+                    intent.putExtra("surface",arrayList.get(i).getSurface());
+                    intent.putExtra("Rooms",arrayList.get(i).getRooms());
+                    intent.putExtra("description",arrayList.get(i).getDescription());
+                    intent.putExtra("address",arrayList.get(i).getAddress());
+                    intent.putExtra("status",arrayList.get(i).getStatus());
+                    intent.putExtra("creation_date",arrayList.get(i).getCreation_date());
+                    intent.putExtra("update",arrayList.get(i).getUpdate_date());
+                    intent.putExtra("agent",arrayList.get(i).getAgent());
+                    startActivity(intent);
+                //}
+
 
             }
         });
