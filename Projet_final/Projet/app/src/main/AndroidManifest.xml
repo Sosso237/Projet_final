@@ -16,6 +16,7 @@
         <activity android:name=".Edit_property3"></activity>
         <activity android:name=".Edit_property2" />
         <activity android:name=".Search" />
+        <activity android:name=".Search_Results" />
         <activity android:name=".Specific_property" />
         <activity android:name=".Display_Properties" />
         <activity android:name=".Edit_profile" />
